@@ -1,6 +1,6 @@
 # U.S. Protest on Race and Policing (2021–2026)
 
-This documentation memo details the structure of the Shiny dashboard, the data sources behind it, what each tab contains, and how to launch it. To run the dashboard, please install the R packages listed below, place the source files in `data/`, run the data prep script once, and then call `shiny::runApp("app.R")`.
+This documentation memo details how to navigate and use the dashboard I created for my final project as part of Ethics 410s. To run the dashboard, please install the R packages listed below, confirm the source files are in `data/`, run the data prep script once, and then call `shiny::runApp("app.R")`.
 
 ## Setup
 
@@ -36,56 +36,24 @@ Located in `data/`: `anes_timeseries_2024_csv_20250808.csv` (data) and `anes_tim
 
 ### About this Dashboard
 
-What it contains:
-- A short prose section describing what the dashboard documents and the two filtering rules I used to keep an event in scope.
-- A card titled "Data Source #1: Crowd Counting Consortium" with a description, a public-access link, and two codebook tables (variables drawn directly from CCC, and variables I computed from CCC inside `data/clean.R`).
-- A card titled "Data Source #2: ANES 2024 Time Series Study" with a description, a public-access link, and a codebook table for the ANES variables used in the dashboard.
-
-Justification: a reader needs to know what is in scope and how each variable is defined before reading any chart.
+This tab provides the dashboard's methodology and a codebook. It explains how the protest data was filtered and documents every variable used in the visualizations. Use it as a reference before reading any chart on the other tabs.
 
 ### Overview
 
-What it contains:
-- Four value boxes: left-leaning event count, right-leaning event count, total arrests across events, total same-day same-city encounters.
-- "Events per week": a mirrored area chart of weekly event counts, with left-leaning events above the axis and right-leaning events below, and key reference dates (Chauvin verdict, Tyre Nichols killed, 2024 election, etc.) labeled on the timeline.
-- "Animated Map of Events Over Time": a `plotly` scattergeo of events plotted by month, with a play button and slider to scrub through time and a radio toggle for three views (all events by side, left-leaning sub-movements, right-leaning sub-movements).
-- "Most-Covered Individual Events": a horizontal bar chart of the 15 events with the largest number of distinct news sources cited, with a callout explaining why some headline-grabbing protests are not primarily about race or policing.
-
-Justification: gives a one-screen summary of how the two sides compare in scale, timing, and press coverage.
+This tab provides a one-screen summary of how mobilization on each side compares in scale, timing, and press coverage. It includes summary counts, a weekly events timeline, an animated geographic map of events over time, and a list of the most-covered events. To use the animated map, switch between the three views (all events, left-leaning sub-movements, right-leaning sub-movements) using the radio buttons above the map, then press play or drag the slider to scrub through months.
 
 ### Mobilization Geography
 
-What it contains:
-- "Mobilization map": a clustered Leaflet map of every qualifying event, colored by side, with a side filter (Both, Left-leaning only, Right-leaning only) above the map.
-- "Top cities for left-leaning mobilization" and "Top cities for right-leaning mobilization": two horizontal bar charts, one per side, ranking the top 15 cities by event count for that side.
-- "Encounter explorer": a sortable DataTable of every same-day same-city encounter (a calendar day on which both sides held at least one event in the same city). Clicking a row zooms the map to that city, replaces the all-time cluster overlay with markers for only that day's events, and surfaces a description card with the day's tactical mix, top organizations, and most common claims.
-
-Justification: shows where each side concentrates at city level and surfaces the days both sides were physically present in the same place.
+This tab provides a geographic view of where each side mobilizes and an explorer for the days both sides showed up in the same city. It includes a clustered map with a side filter, top-cities bar charts ranked separately for each side, and an encounter table. To filter the map by side, use the radio button above it. To drill into a specific contested day, click any row in the encounter table — the map will zoom to that city, switch to show only that day's events, and a description card will appear below the table summarizing the day.
 
 ### Tactics and Framing
 
-What it contains:
-- "Tactics used at left-leaning events" and "Tactics used at right-leaning events": two horizontal bar charts of the top 10 event types per side (rallies, marches, vigils, demonstrations, etc.), ranked by frequency.
-- "Claims raised at left-leaning events" and "Claims raised at right-leaning events": two stacked plotly bar charts. I split each event's claims summary on its leading verb ("for" or "against") to get a stance and an issue, then plotted the most-mentioned issues per side. Bars to the right of zero are mentions framed as "for", bars to the left are mentions framed as "against". Hover any bar for the full issue text.
-
-Justification: documents what forms of action each side actually takes and what each side is for and against.
+This tab provides a comparative view of what each side does and what each side advocates for or against. It includes two bar charts of the tactical mix per side (rallies, marches, vigils, etc.) and two diverging plotly bar charts of the most-mentioned issues per side, with stance ("for" on the right, "against" on the left). To see the full text of any truncated issue label, hover over the corresponding bar in the claims chart.
 
 ### Organizational Infrastructure
 
-What it contains:
-- A side filter (All, Left-leaning, Right-leaning) and a searchable dropdown of organization names. Picking an organization populates the rest of the tab.
-- Four value boxes: total events, number of states the organization was active in, total arrests across its events, and the year range of its activity.
-- "All recorded events for this organization": a sortable DataTable of every event for the selected organization.
-- "Geographic footprint": a Leaflet map of the localities where the organization has been recorded.
-- "Tactical signature and crowd size": a horizontal bar of the organization's top tactics, plus a density plot of crowd sizes across the entire dataset with a vertical line at this organization's median crowd size for context.
-- "Coalition network for this organization": an interactive visNetwork ego-graph of the top 15 organizations this one has co-appeared with on at least two shared events. If the organization has no qualifying ties, the panel shows a "No coalition partners on file" message instead.
-
-Justification: lets a reader profile any organization in the dataset along its geographic, tactical, and coalition dimensions.
+This tab provides a profile view for any single organization in the dataset. It includes a side filter and a searchable dropdown to pick an organization, then summary statistics, an event table, a geographic footprint map, a tactical and crowd-size panel, and a coalition network of organizations that co-appeared on the same events. To profile an organization, narrow the dropdown by side first if you want, then start typing the organization's name; the rest of the tab will populate automatically once a name is selected.
 
 ### Public Opinion
 
-What it contains:
-- "Comparing the two thermometers: Black Lives Matter vs. Police": a dumbbell chart of mean Black Lives Matter and police thermometer ratings (0–100) per group, with a dropdown that switches the breakdown between party identification and race or ethnicity.
-- "Pick a question to see how Americans answered it": a dropdown with 13 question/breakdown combinations covering BLM warmth, police warmth, frequency of police using more force than necessary, perceived differential treatment by police and federal government, perceived discrimination against Black Americans, and views on urban unrest. Picking an entry renders a stacked Likert chart of the response distribution.
-
-Justification: grounds the protest record against a population-level snapshot of public attitudes from late 2024.
+This tab provides a snapshot of U.S. public opinion on race and policing from the ANES 2024 survey. It includes a dumbbell chart comparing mean Black Lives Matter and police thermometer ratings across groups, and a question selector that renders a stacked Likert chart for any of 13 question/breakdown combinations. To switch the dumbbell breakdown between party identification and race, use the dropdown inside that card. To view a different survey question, pick a new entry from the question selector dropdown below it.
