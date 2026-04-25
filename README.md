@@ -22,7 +22,7 @@ Rscript -e 'shiny::runApp("app.R")'
 
 ## Data sources
 
-I used two datasets.
+I used two datasets for this dashboard: the Crowd Counting Consortium dataset for the protest event record, and the ANES 2024 Time Series Study for the public opinion environment surrounding it.
 
 **Crowd Counting Consortium (CCC)**: This was the source I used for every protest event in the dashboard. Each event record includes a date, location, claims summary, organizing groups, an estimated crowd size, an arrest count, the news sources cited, and a left- or right-leaning valence assigned by the source coders. I used CCC for every chart on every tab except Public Opinion.
 Public access: <https://dataverse.harvard.edu/dataverse/crowdcountingconsortium>.
