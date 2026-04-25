@@ -47,7 +47,7 @@ I used two datasets for this dashboard: the Crowd Counting Consortium dataset fo
 
 ### About this Dashboard
 
-The About this Dashboard tab is a brief introduction to the project. It explains what the dashboard documents, walks through the two datasets I used (the Crowd Counting Consortium and the ANES 2024 Time Series Study), and lists every variable that appears in the visualizations in a codebook. Read this tab first if you want context on how the data was filtered or what any variable in the dashboard means.
+This tab provides a very brief introduction to the project and an introduction to the data I used, walks through my thought process behind how I filtered the dataset, and includes the codebook as well. I would recommend reading this tab first to get context before reading any of the charts on the other tabs.
 
 ### Overview
 
