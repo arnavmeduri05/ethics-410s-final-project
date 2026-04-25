@@ -24,11 +24,11 @@ Rscript -e 'shiny::runApp("app.R")'
 
 I used two datasets.
 
-**Crowd Counting Consortium (CCC)** — the source for every protest event in the dashboard. Each event record includes a date, location, claims summary, organizing groups, an estimated crowd size, an arrest count, the news sources cited, and a left- or right-leaning valence assigned by the source coders. I used CCC for every chart on every tab except Public Opinion.
+**Crowd Counting Consortium (CCC)**: This was the source I used for every protest event in the dashboard. Each event record includes a date, location, claims summary, organizing groups, an estimated crowd size, an arrest count, the news sources cited, and a left- or right-leaning valence assigned by the source coders. I used CCC for every chart on every tab except Public Opinion.
 Public access: <https://dataverse.harvard.edu/dataverse/crowdcountingconsortium>.
 Located in `data/`: `ccc_compiled_20212024.csv` (phase 2) and `ccc-phase3-public.csv` (phase 3).
 
-**ANES 2024 Time Series Study** — the source for every public opinion measure in the dashboard. I used ANES for the dumbbell chart and the Likert charts on the Public Opinion tab.
+**ANES 2024 Time Series Study**: This was the source I used for every public opinion measure in the dashboard. I used ANES for the dumbbell chart and the Likert charts on the Public Opinion tab.
 Public access: <https://electionstudies.org/data-center/2024-time-series-study/>.
 Located in `data/`: `anes_timeseries_2024_csv_20250808.csv` (data) and `anes_timeseries_2024_userguidecodebook_20250808.pdf` (variable codebook).
 
@@ -36,7 +36,7 @@ Located in `data/`: `anes_timeseries_2024_csv_20250808.csv` (data) and `anes_tim
 
 ### About this Dashboard
 
-This tab provides the dashboard's methodology and a codebook. It explains how the protest data was filtered and documents every variable used in the visualizations. Use it as a reference before reading any chart on the other tabs.
+This tab provides an explanation of my reasoning, the dashboard's methodology, and the codebook. Please use it as a reference before reading any chart on the other tabs.
 
 ### Overview
 
