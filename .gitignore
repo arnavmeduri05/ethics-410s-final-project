@@ -1,0 +1,14 @@
+# Data files tracked via Git LFS (no longer ignored)
+
+# R session / environment
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Shiny logs
+*.log
