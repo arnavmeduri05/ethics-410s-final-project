@@ -1,24 +1,31 @@
 # U.S. Protest on Race and Policing (2021–2026)
 
-This documentation memo details how to navigate and use the dashboard I created for my final project as part of Ethics 410s. To run the dashboard, please install the R packages listed below, confirm the source files are in `data/`, run the data prep script once, and then call `shiny::runApp("app.R")`.
+This documentation memo details how to navigate and use the dashboard I created for my final project as part of Ethics 410s. To run the dashboard, please follow the steps below in Setup. Alternatively, you can access the deployed website at [placeholder URL].
 
 ## Setup
 
-```bash
-# 1. Install required R packages
-Rscript -e 'install.packages(c("shiny", "shinydashboard", "tidyverse", "lubridate", "ggplot2", "ggrepel", "plotly", "leaflet", "visNetwork", "DT", "RColorBrewer", "igraph"))'
+1. Install the required R packages:
 
-# 2. Source files are in data/ (already in this repo via Git LFS):
-#    - data/ccc_compiled_20212024.csv               (CCC phase 2, 2021–2024)
-#    - data/ccc-phase3-public.csv                   (CCC phase 3, 2024 onward)
-#    - data/anes_timeseries_2024_csv_20250808.csv   (ANES 2024)
+   ```bash
+   Rscript -e 'install.packages(c("shiny", "shinydashboard", "tidyverse", "lubridate", "ggplot2", "ggrepel", "plotly", "leaflet", "visNetwork", "DT", "RColorBrewer", "igraph"))'
+   ```
 
-# 3. Run the data prep script once to generate the cleaned RDS files in data/clean/
-Rscript data/clean.R
+2. Confirm the source files are in `data/` (already in this repo via Git LFS):
+   - `data/ccc_compiled_20212024.csv` (CCC phase 2, 2021–2024)
+   - `data/ccc-phase3-public.csv` (CCC phase 3, 2024 onward)
+   - `data/anes_timeseries_2024_csv_20250808.csv` (ANES 2024)
 
-# 4. Launch the dashboard
-Rscript -e 'shiny::runApp("app.R")'
-```
+3. Run the data prep script once to generate the cleaned RDS files in `data/clean/`:
+
+   ```bash
+   Rscript data/clean.R
+   ```
+
+4. Launch the dashboard:
+
+   ```bash
+   Rscript -e 'shiny::runApp("app.R")'
+   ```
 
 ## Data sources
 
