@@ -228,7 +228,6 @@ media_top_events <- events_pc |>
 total_arrests_dataset <- sum(events_pc$arrests, na.rm = TRUE)
 encounters_n <- nrow(encounters)
 
-# ----- Codebooks for the About this Dashboard tab ---------------------------
 codebook_ccc <- tibble::tribble(
   ~Variable,            ~`Type / values`,                                       ~Description,
   "date",               "Date (YYYY-MM-DD)",                                    "The day the event was held.",
@@ -293,8 +292,6 @@ codebook_dt <- function(d) {
                 class = "compact stripe hover")
 }
 
-# Reference distribution of per-event crowd sizes across all events on the
-# dataset, used by the org tab to place a single org's median in context.
 all_sizes <- events_pc$size_mean
 all_sizes <- all_sizes[!is.na(all_sizes) & all_sizes > 0]
 size_dist_overall <- tibble(size = all_sizes,
@@ -317,9 +314,6 @@ empty_msg_plot <- function(msg) {
     theme_void()
 }
 
-# Callout box used to visually distinguish course-concept explanations from
-# the chart-description paragraphs. The accent color marks the type of
-# callout: blue for scope / data notes, gold for theory / framework notes.
 callout_box <- function(..., variant = "info") {
   styles <- switch(
     variant,
@@ -446,7 +440,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Movement and countermovement mobilization.</b> Meyer and Staggenborg argue that a movement and the countermovement that opposes it must be studied as a single interactive system, since each side's tactics, framings, and victories shape the other's response."))
+                          HTML("<b>Movement and countermovement mobilization.</b> Meyer and Staggenborg argue that a movement and the countermovement that opposes it must be studied as a single interactive system, since each side's tactics, framings, and victories influence the other's response."))
                  )
           )
         ),
@@ -694,12 +688,11 @@ ui <- dashboardPage(
 
 server <- function(input, output, session) {
 
-  output$codebook_ccc     <- renderDT(codebook_dt(codebook_ccc))
+  output$codebook_ccc <- renderDT(codebook_dt(codebook_ccc))
   output$codebook_derived <- renderDT(codebook_dt(codebook_derived))
-  output$codebook_anes    <- renderDT(codebook_dt(codebook_anes))
+  output$codebook_anes <- renderDT(codebook_dt(codebook_anes))
 
-
-  org_choices_left  <- org_summary |>
+  org_choices_left <- org_summary |>
     filter(as.character(dominant_side) == PRO_LABEL) |>
     arrange(desc(events)) |> pull(org)
   org_choices_right <- org_summary |>
@@ -1035,30 +1028,22 @@ server <- function(input, output, session) {
                 options = list(pageLength = 10, scrollX = TRUE))
   })
 
-  output$tactics_pro_types <- renderPlot({
-    d <- top_event_types |> filter(side == PRO_LABEL) |>
-      arrange(events) |> mutate(event_type = factor(event_type, levels = event_type))
+  tactics_render <- function(side_label, fill_color) {
+    d <- top_event_types |>
+      filter(side == side_label) |>
+      arrange(events) |>
+      mutate(event_type = factor(event_type, levels = event_type))
     ggplot(d, aes(x = events, y = event_type)) +
-      geom_col(fill = PRO_COLOR, width = 0.7) +
+      geom_col(fill = fill_color, width = 0.7) +
       geom_text(aes(label = format(events, big.mark = ",")),
                 hjust = -0.2, size = 3.4, color = "#333") +
       scale_x_continuous(expand = expansion(mult = c(0, 0.18))) +
       labs(x = "Events", y = NULL) +
       theme_minimal() +
       theme(panel.grid.major.y = element_blank())
-  })
-  output$tactics_anti_types <- renderPlot({
-    d <- top_event_types |> filter(side == ANTI_LABEL) |>
-      arrange(events) |> mutate(event_type = factor(event_type, levels = event_type))
-    ggplot(d, aes(x = events, y = event_type)) +
-      geom_col(fill = ANTI_COLOR, width = 0.7) +
-      geom_text(aes(label = format(events, big.mark = ",")),
-                hjust = -0.2, size = 3.4, color = "#333") +
-      scale_x_continuous(expand = expansion(mult = c(0, 0.18))) +
-      labs(x = "Events", y = NULL) +
-      theme_minimal() +
-      theme(panel.grid.major.y = element_blank())
-  })
+  }
+  output$tactics_pro_types  <- renderPlot(tactics_render(PRO_LABEL,  PRO_COLOR))
+  output$tactics_anti_types <- renderPlot(tactics_render(ANTI_LABEL, ANTI_COLOR))
 
   claims_bar_render <- function(side_label) {
     d <- claim_objects |>
