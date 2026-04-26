@@ -1181,7 +1181,7 @@ server <- function(input, output, session) {
     od <- org_data(); req(od)
     valueBox(paste0(format(od$summary$first_event, "%Y"), " to ",
                     format(od$summary$last_event,  "%Y")),
-             "Active span", icon = icon("calendar"), color = "yellow")
+             "Activity timeline", icon = icon("calendar"), color = "yellow")
   })
   output$org_events_table <- renderDT({
     od <- org_data(); req(od)
