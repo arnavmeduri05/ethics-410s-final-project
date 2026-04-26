@@ -1051,8 +1051,8 @@ server <- function(input, output, session) {
       slice_max(total, n = 12) |>
       arrange(total) |>
       mutate(object_full = tools::toTitleCase(object),
-             object      = object_full,
-             object      = factor(object, levels = unique(object)))
+             object = str_trunc(object_full, 50, ellipsis = "…"),
+             object = factor(object, levels = unique(object)))
     if (nrow(d) == 0) {
       return(plotly_empty(type = "scatter", mode = "markers") |>
                layout(annotations = list(list(
