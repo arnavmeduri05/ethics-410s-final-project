@@ -1,6 +1,6 @@
 # U.S. Protest on Race and Policing (2021–2026)
 
-This documentation memo details how to navigate and use the dashboard I created for my final project as part of Ethics 410s. To run the dashboard, please follow the steps below in Setup. Alternatively, you can access the deployed website at [placeholder URL].
+This documentation memo details how to navigate and use the dashboard I created for my final project for Ethics 410S. To run the dashboard, please follow the steps below in Setup. Alternatively, you can access the deployed website at [placeholder URL].
 
 ## Setup
 
@@ -34,7 +34,6 @@ I used two datasets for this dashboard: the Crowd Counting Consortium dataset fo
 **Crowd Counting Consortium (CCC)**: This was the source I used for every protest event in the dashboard. The dataset includes information at the event level (e.g., date, location, claims summary, organizing groups, estimated crowd size, arrest count, news sources cited, and a left-leaning or right-leaning valence assigned by the source coders).
 
 * Public access link: <https://dataverse.harvard.edu/dataverse/crowdcountingconsortium>
-* I used CCC for every chart on every tab except Public Opinion.
 * Located in `data/`: `ccc_compiled_20212024.csv` (phase 2) and `ccc-phase3-public.csv` (phase 3).
 
 **ANES 2024 Time Series Study**: This was the source I used for every public opinion measure on the Public Opinion tab. The dataset includes nationally representative survey responses from the 2024 wave on race, policing, party identification, race or ethnicity, and related demographic and attitudinal variables.
@@ -47,11 +46,11 @@ I used two datasets for this dashboard: the Crowd Counting Consortium dataset fo
 
 ### About this Dashboard
 
-This tab provides a very brief introduction to the project and an introduction to the data I used, walks through my thought process behind how I filtered the dataset, and includes the codebook as well. I would recommend reading this tab first to get context before reading any of the charts on the other tabs.
+This tab provides a very brief introduction to the project and an introduction to the data I used, and also walks through how I filtered the dataset (e.g., what I considered when deciding which events to include). I would recommend reading this tab first to get an understanding of the dashboard before proceeding to the other tabs.
 
 ### Overview
 
-The Overview tab provides a general overview of race and policing protest activity in the United States from January 2021 through February 2026. At the top of the tab, four value boxes show the total number of left-leaning events, the total number of right-leaning events, the total number of arrests across all events, and the total number of same-day same-city encounters between the two sides. Below the value boxes is a weekly events chart, with left-leaning events plotted above the horizontal axis and right-leaning events plotted below it, and key reference dates labeled along the timeline. Below the weekly chart is an animated map that plots each event as a single point on a U.S. base map. To use the animated map, choose one of the three views (all events by side, left-leaning sub-movements, right-leaning sub-movements) using the radio buttons above the map, then press play or drag the slider below the map to step through months. At the bottom of the tab is a bar chart that lists the fifteen events with the largest number of distinct news sources cited, along with a callout that explains why some of those events are not primarily about race or policing.
+The Overview tab provides a general overview of race and policing protest activity in the United States from 2021–2026. At the top of the tab are four value boxes that show the total number of left-leaning events, the total number of right-leaning events, the total number of arrests across all events, and the total number of same-day same-city encounters between the two sides. Below the value boxes is a chart showing weekly event counts for left-leaning and right-leaning protest. Below the weekly chart is an animated map that shows where events occurred over time; to interact with the map, choose a view (i.e., all events by side, left-leaning sub-movements, or right-leaning sub-movements) and press play or drag the slider. At the bottom of the tab is a bar chart that lists the fifteen events with the largest number of distinct news sources cited.
 
 ### Mobilization Geography
 
@@ -63,8 +62,8 @@ The Tactics and Framing tab provides a comparative look at what each side of the
 
 ### Organizational Infrastructure
 
-In the Organizational Infrastructure tab, you can look up any single organization in the dataset and see its profile. At the top of the tab is a side filter and a searchable dropdown. To pick an organization, narrow the dropdown by side first if you want, then start typing the organization's name. Once an organization is selected, the rest of the tab fills in: four value boxes show summary statistics (total events, states active in, total arrests, activity timeline), a sortable table lists every recorded event for the organization, a Leaflet map shows the cities where the organization has been active, a panel summarizes the organization's most-used event types alongside a crowd-size distribution with the organization's median marked against the dataset overall, and a coalition network shows the other organizations it has co-appeared with on at least two of the same events. If the selected organization has no qualifying coalition partners, the network panel will show a "No coalition partners on file" message instead of an ego graph.
+The Organizational Infrastructure tab provides a profile view for any single organization in the dataset. At the top of the tab is a side filter and a searchable dropdown; to pick an organization, narrow the dropdown by side first if you want, then start typing the organization's name. Below the dropdown are four value boxes that show summary statistics for the selected organization (total events, states active in, total arrests, and activity timeline). Below the value boxes is a sortable table that lists every recorded event for the organization. Below the events table is a Leaflet map showing the cities where the organization has been active, alongside a panel that summarizes the organization's most-used event types and a crowd-size distribution with the organization's median marked against the dataset overall. At the bottom of the tab is a coalition network that shows the other organizations the selected one has co-appeared with on at least two of the same events.
 
 ### Public Opinion
 
-In the Public Opinion tab, you can look at how Americans answered survey questions about race, policing, and related topics in the ANES 2024 study. At the top of the tab is a dumbbell chart that plots the mean Black Lives Matter feeling thermometer rating and the mean police feeling thermometer rating (on a 0 to 100 scale) for each group, with a horizontal line connecting the two dots on each row. To switch the breakdown between party identification and race or ethnicity, use the dropdown inside that card. Below the dumbbell is a question selector card. To view a different survey question, pick a new entry from the dropdown; the stacked Likert chart below it will update to show the response distribution for that question.
+The Public Opinion tab provides a snapshot of how Americans answered survey questions about race, policing, and related topics in the ANES 2024 study. At the top of the tab is a dumbbell chart that plots the mean Black Lives Matter feeling thermometer rating and the mean police feeling thermometer rating (on a 0 to 100 scale) for each group, with a horizontal line connecting the two dots on each row; to switch the breakdown between party identification and race or ethnicity, use the dropdown inside that card. Below the dumbbell is a question selector card; to view a different survey question, pick a new entry from the dropdown, and the stacked Likert chart below it will update to show the response distribution.
