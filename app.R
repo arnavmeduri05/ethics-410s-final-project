@@ -376,7 +376,7 @@ ui <- dashboardPage(
                  tags$h2("About this Dashboard",
                          style = "margin: 4px 0 12px 0;"),
                  tags$p(style = "color:#444; font-size: 15px; margin: 0 0 8px 0;",
-                        "This dashboard documents protest activity on race and policing in the United States between January 2021 and February 2026, alongside a snapshot of U.S. public opinion from late 2024 (the American National Election Studies survey)."),
+                        "This dashboard is meant to be a resource for anyone looking to learn about race and policing protest in the United States. It documents protest activity between January 2021 and February 2026, alongside a snapshot of U.S. public opinion from late 2024 (the American National Election Studies survey)."),
                  tags$p(style = "color:#444; font-size: 15px; margin: 0 0 6px 0;",
                         HTML("I filtered the Crowd Counting Consortium dataset based on two rules: (1) I kept events the source coders had tagged with <em>policing</em>; and (2) I kept events the source coders had tagged with <em>racism</em> only if the event's title or claims summary also explicitly mentioned race or policing language (e.g., Black Lives Matter, police brutality, white supremacy, civil rights, immigration enforcement). I also dropped events whose left-versus-right valence (the source coders' indicator of whether an event leans politically left or right) was missing or neutral, so left-leaning and right-leaning mobilization could be compared directly."))
           )
