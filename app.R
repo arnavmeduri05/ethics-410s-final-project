@@ -352,6 +352,7 @@ callout_box <- function(..., variant = "info") {
 }
 
 ui <- dashboardPage(
+  title = "U.S. Race and Policing Protest Explorer",
   dashboardHeader(title = tags$span(icon("people-group"), " ",
                                     "U.S. Race and Policing Protest Explorer"),
                   titleWidth = 460),
