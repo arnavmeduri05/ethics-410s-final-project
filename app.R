@@ -566,7 +566,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Repertoires of contention.</b> Charles Tilly describes a movement's <em>repertoire</em> as the limited menu of action forms that activists in a given era and place know how to perform. Wasow extends this to argue that the choice of tactic carries real consequences for how the public and the press receive a movement. The two charts below show which tactics each side actually performs, ranked by frequency.")))
+                          HTML("<b>Repertoires of contention.</b> Charles Tilly describes a movement's <em>repertoire</em> as the limited menu of action forms that activists in a given era and place know how to perform. Tactical choice has real consequences for how movements are received; the two charts below show which tactics each side actually performs, ranked by frequency.")))
           )
         ),
         fluidRow(
