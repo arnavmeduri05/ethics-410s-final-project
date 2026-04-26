@@ -320,7 +320,7 @@ callout_box <- function(..., variant = "info") {
     info = list(border = "#2c5282", bg = "#eef4fb",
                 badge_bg = "#2c5282", badge = "Note"),
     theory = list(border = "#b7791f", bg = "#fdf6e3",
-                  badge_bg = "#b7791f", badge = "Course concept"),
+                  badge_bg = "#b7791f", badge = "The Big Picture"),
     list(border = "#2c5282", bg = "#eef4fb",
          badge_bg = "#2c5282", badge = "Note")
   )
@@ -441,7 +441,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Movement and countermovement mobilization.</b> Meyer and Staggenborg argue that a movement and the countermovement that opposes it must be studied as a single interactive system, since each side's tactics, framings, and victories influence the other's response."))
+                          HTML("<b>Movement and countermovement mobilization.</b> David S. Meyer and Suzanne Staggenborg argue that a movement and the countermovement that opposes it must be studied as a single interactive system, since each side's tactics, framings, and victories influence the other's response."))
                  )
           )
         ),
@@ -505,7 +505,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Movements and countermovements.</b> Meyer and Staggenborg argue that a countermovement emerges in response to a movement's apparent gains, that movement and countermovement then compete for influence across multiple arenas (the streets, the legislative arena, the courts, and the media), and that each side's tactics, framings, and victories shape the other's response. This page focuses on one of those arenas (the streets), looking first at where each side mobilizes geographically, then at the specific days and cities where both sides showed up at the same time."))
+                          HTML("<b>Movements and countermovements.</b> David S. Meyer and Suzanne Staggenborg argue that a countermovement emerges in response to a movement's apparent gains, that movement and countermovement then compete for influence across multiple arenas (the streets, the legislative arena, the courts, and the media), and that each side's tactics, framings, and victories shape the other's response. This page focuses on one of those arenas (the streets), looking first at where each side mobilizes geographically, then at the specific days and cities where both sides showed up at the same time."))
                  )
           )
         ),
@@ -584,7 +584,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Frame extension.</b> Snow, Rochford, Worden, and Benford describe <em>frame extension</em> as a movement's effort to recruit participants by extending the boundaries of its core frame to include the views, interests, or sentiments of adjacent targeted groups, and the patterns below illustrate this directly: on the left-leaning side the core frame of opposing racism and police brutality is visibly extended to issues such as LGBTQ+ rights, Medicaid, healthcare, housing, environmental conservation, and immigration enforcement, while on the right-leaning side the core frame of patriotism and white supremacy is extended to issues such as Christian values, freedom, election integrity, and opposition to critical race theory."))
+                          HTML("<b>Frame extension.</b> David A. Snow, E. Burke Rochford Jr., Steven K. Worden, and Robert D. Benford describe <em>frame extension</em> as a movement's effort to recruit participants by extending the boundaries of its core frame to include the views, interests, or sentiments of adjacent targeted groups, and the patterns below illustrate this directly: on the left-leaning side the core frame of opposing racism and police brutality is visibly extended to issues such as LGBTQ+ rights, Medicaid, healthcare, housing, environmental conservation, and immigration enforcement, while on the right-leaning side the core frame of patriotism and white supremacy is extended to issues such as Christian values, freedom, election integrity, and opposition to critical race theory."))
                  )
           )
         ),
@@ -607,7 +607,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Social movement organizations.</b> Lune describes social movement organizations, or SMOs, as the durable infrastructure that converts diffuse public sentiment into sustained collective action (i.e., by recruiting, training, funding, framing, and coordinating). Almeida adds that movements emerge most readily where preexisting organizations are already in place, providing the leaders, networks, and resources needed to launch collective action. This tab documents each organization's profile (e.g., its geographic footprint, its tactical repertoire, the claims it has raised, and the other organizations it has co-mobilized with)."))
+                          HTML("<b>Social movement organizations.</b> Howard Lune describes social movement organizations, or SMOs, as the durable infrastructure that converts diffuse public sentiment into sustained collective action (i.e., by recruiting, training, funding, framing, and coordinating). Paul Almeida adds that movements emerge most readily where preexisting organizations are already in place, providing the leaders, networks, and resources needed to launch collective action. This tab documents each organization's profile (e.g., its geographic footprint, its tactical repertoire, the claims it has raised, and the other organizations it has co-mobilized with)."))
                  )
           )
         ),
@@ -641,7 +641,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Movement consequences.</b> Snow and Soule argue that protest movements are best evaluated not only by the immediate political wins they secure but also by the cultural and attitudinal shifts they produce over time, so that public opinion matters as both a context for protest and as one of its outcomes."))
+                          HTML("<b>Movement consequences.</b> David A. Snow and Sarah A. Soule argue that protest movements are best evaluated not only by the immediate political wins they secure but also by the cultural and attitudinal shifts they produce over time, so that public opinion matters as both a context for protest and as one of its outcomes."))
                  )
           )
         ),
