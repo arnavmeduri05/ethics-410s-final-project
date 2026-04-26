@@ -638,11 +638,11 @@ ui <- dashboardPage(
                  tags$h2("How does the public see race and policing?",
                          style = "margin: 4px 0 6px 0;"),
                  tags$p(style = "color:#555; margin: 0 0 12px 0;",
-                        "All percentages on this page are computed directly from the ANES 2024 Time Series Study (post-election survey, n = 5,521). Each respondent's answer is grouped by their party identification or by their race / ethnicity, and the bars show the share of respondents in each group who chose each answer."),
+                        "All percentages on this page are computed directly from the ANES 2024 Time Series Study (post-election survey, n = 5,521). ANES asks respondents both multiple-choice opinion questions and feeling thermometers, where respondents rate a person or group on a 0-100 scale (0 means very cold or very unfavorable, 100 means very warm or very favorable). Each respondent's answer is grouped by their party identification or by their race / ethnicity, and the bars show the share of respondents in each group who chose each answer."),
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Movement consequences.</b> David A. Snow and Sarah A. Soule argue that movements produce political, cultural, and attitudinal consequences, not just legislative wins. Public opinion is one place to look for the cultural and attitudinal ones."))
+                          HTML("<b>Movement consequences.</b> David A. Snow and Sarah A. Soule argue that protest movements have effects that go well beyond passing legislation, including shifts in cultural norms and public attitudes. Public opinion data is one way to look at those broader effects."))
                  )
           )
         ),
