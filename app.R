@@ -642,7 +642,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Movement consequences.</b> David A. Snow and Sarah A. Soule argue that protest movements have effects that go well beyond passing legislation, including shifts in cultural norms and public attitudes. Public opinion data is one way to look at those broader effects."))
+                          HTML("<b>Movement consequences.</b> David A. Snow and Sarah A. Soule argue that protest movements produce several kinds of consequences — that is, not only policy change, but also cultural shifts, biographical effects on participants, and changes in public attitudes. This tab presents survey evidence on the last of these."))
                  )
           )
         ),
