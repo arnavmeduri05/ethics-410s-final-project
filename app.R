@@ -641,7 +641,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Movement consequences.</b> David A. Snow and Sarah A. Soule argue that protest movements are best evaluated not only by the immediate political wins they secure but also by the cultural and attitudinal shifts they produce over time, so that public opinion matters as both a context for protest and as one of its outcomes."))
+                          HTML("<b>Movement consequences.</b> David A. Snow and Sarah A. Soule argue that movements produce political, cultural, and attitudinal consequences, not just legislative wins. Public opinion is one place to look for the cultural and attitudinal ones."))
                  )
           )
         ),
