@@ -352,7 +352,7 @@ callout_box <- function(..., variant = "info") {
 }
 
 ui <- dashboardPage(
-  dashboardHeader(title = "U.S. Protest on Race and Policing (2021–2026)",
+  dashboardHeader(title = "U.S. Race and Policing Protest Explorer",
                   titleWidth = 460),
   dashboardSidebar(
     width = 260,

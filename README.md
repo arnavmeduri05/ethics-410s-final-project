@@ -1,4 +1,4 @@
-# U.S. Protest on Race and Policing (2021–2026)
+# U.S. Race and Policing Protest Explorer
 
 This documentation memo details how to navigate and use the dashboard I created for my final project for Ethics 410S. To run the dashboard, please follow the steps below in Setup. Alternatively, you can access the deployed website at [placeholder URL].
 
