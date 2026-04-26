@@ -367,6 +367,12 @@ ui <- dashboardPage(
     )
   ),
   dashboardBody(
+    tags$head(tags$style(HTML(
+      ".main-header .logo {
+         text-align: left !important;
+         padding-left: 15px !important;
+       }"
+    ))),
     tabItems(
 
       tabItem(
