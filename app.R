@@ -607,7 +607,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Social movement organizations.</b> Lune and Chen describe social movement organizations, or SMOs, as the durable infrastructure that converts diffuse public sentiment into sustained collective action (i.e., by recruiting, training, funding, framing, and coordinating). Almeida adds that organizations are essentially \"carriers of frames\" across events. This tab documents each organization's geographic footprint, its tactical repertoire, the claims it has raised, and the other organizations it has co-mobilized with."))
+                          HTML("<b>Social movement organizations.</b> Lune describes social movement organizations, or SMOs, as the durable infrastructure that converts diffuse public sentiment into sustained collective action (i.e., by recruiting, training, funding, framing, and coordinating). Almeida adds that movements emerge most readily where preexisting organizations are already in place, providing the leaders, networks, and resources needed to launch collective action. This tab documents each organization's profile (e.g., its geographic footprint, its tactical repertoire, the claims it has raised, and the other organizations it has co-mobilized with)."))
                  )
           )
         ),
