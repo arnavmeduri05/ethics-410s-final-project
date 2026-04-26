@@ -446,7 +446,7 @@ ui <- dashboardPage(
                  callout_box(
                    variant = "theory",
                    tags$p(style = "margin: 0;",
-                          HTML("<b>Movement and countermovement mobilization.</b> Meyer and Staggenborg argue that a movement and the countermovement that opposes it must be studied as a single interactive system, since each side's tactics, framings, and victories shape the other's response. This dashboard shows left-leaning protest in deep blue and right-leaning protest in deep maroon on every chart and map, so each side's pattern can be read against the other (methodology and a full codebook are on the About this Dashboard tab)."))
+                          HTML("<b>Movement and countermovement mobilization.</b> Meyer and Staggenborg argue that a movement and the countermovement that opposes it must be studied as a single interactive system, since each side's tactics, framings, and victories shape the other's response."))
                  )
           )
         ),
